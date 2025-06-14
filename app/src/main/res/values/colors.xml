@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="black_faded">#A3000000</color>
+    <color name="red">#CA0000</color>
+    <color name="green">#5b8c00</color>
+    <color name="blue">#1066B6</color>
+
+    <color name="dark_blue">#252E3E</color>
+
+    <color name="text_color_black">#363636</color>
+    <color name="text_color_black_faded">#CC363636</color>
+    <color name="text_color_light">#D0D9E4</color>
+    <color name="text_color_light_faded">#8BDDE6EF</color>
+
+    <color name="panel_divider_color">#15000000</color>
+    <color name="panel_divider_color_dark">#32FFFFFF</color>
+
+
+    <color name="toolbar_icon_color">@color/text_color_light</color>
+
+    <color name="background_color">#c2d0df</color>
+    <color name="bg_color_light">#ecf1f7</color>
+
+    <color name="panel_color">#ecf5ff</color>
+
+    <!-- Dark Mode -->
+    <color name="dark_mode_background_color">#030c16</color>
+    <color name="dark_mode_panel_background_color">#1b6fc4</color>
+</resources>

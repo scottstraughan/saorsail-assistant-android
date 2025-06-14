@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:ignore="UselessParent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:minHeight="100dp"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:background="?primaryContainerColor"
+        tools:ignore="UselessParent">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/installRequestAppIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:background="@color/blue"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/installRequestAppTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|start"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="?primaryTextColor" />
+
+            <TextView
+                android:id="@+id/installRequestAppStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|start"
+                android:textSize="14sp"
+                android:textColor="?secondaryTextColor" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/statusIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/downloadItemProgressIndicator"
+                android:layout_gravity="center"
+                android:progress="0"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:indicatorSize="34dp"
+                app:indicatorInset="0dp"
+                app:indicatorColor="?hintColor"
+                app:trackColor="@color/background_color"
+                app:trackThickness="4dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

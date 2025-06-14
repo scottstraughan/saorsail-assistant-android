@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="primaryTextColor" format="reference|color" />
+    <attr name="secondaryTextColor" format="reference|color" />
+    <attr name="hintColor" format="reference|color" />
+    <attr name="primaryContainerColor" format="reference|color" />
+    <attr name="secondaryContainerColor" format="reference|color" />
+    <attr name="dividerColor" format="reference|color" />
+</resources>

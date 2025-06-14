@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Shared -->
+    <style name="Theme.Saorsail.Shared" parent="Theme.AppCompat.NoActionBar">
+        <item name="hintColor">@color/blue</item>
+        <item name="primaryContainerColor">@color/text_color_light</item>
+        <item name="primaryTextColor">@color/text_color_black</item>
+        <item name="secondaryTextColor">@color/text_color_black_faded</item>
+
+        <item name="android:textColor">?primaryTextColor</item>
+        <item name="android:textColorSecondary">?secondaryTextColor</item>
+        <item name="android:windowBackground">@color/background_color</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="alertDialogTheme">@style/Theme.Saorsail.AlertTheme</item>
+        <item name="colorPrimary">?hintColor</item>
+        <item name="colorAccent">?hintColor</item>
+        <item name="dividerColor">@color/panel_divider_color</item>
+    </style>
+
+    <!-- Preference Alert etc -->
+    <style name="Theme.Saorsail.AlertTheme" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:textColor">?hintColor</item>
+    </style>
+
+    <!-- Default Activity -->
+    <style name="Theme.Saorsail.Default" parent="Theme.Saorsail.Shared" />
+
+    <!-- Pair Activity -->
+    <style name="Theme.Saorsail.Pair" parent="Theme.Saorsail.Shared">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="panelBackgroundColor">?primaryContainerColor</item>
+    </style>
+
+    <!-- Toolbar -->
+    <style name="Theme.Saorsail.Settings.Toolbar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:backgroundTint">?hintColor</item>
+        <!-- Styles the "up" button on toolbar -->
+        <!-- Note: to style menu items, change value at @color/toolbar_icon_color -->
+        <item name="colorControlNormal">@color/toolbar_icon_color</item>
+        <item name="titleTextColor">@color/text_color_light</item>
+    </style>
+
+    <!-- Large blue button, used for primary click events -->
+    <style name="PrimaryButton">
+        <item name="backgroundTint">?hintColor</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:textColor">@color/text_color_light</item>
+    </style>
+
+    <!-- Transparent button, used for secondary click events -->
+    <style name="SecondaryButton" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:textColor">?android:textColor</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <!-- Custom styling for the panels -->
+    <declare-styleable name="Theme.Saorsail.Pair.Styling">
+        <attr name="panelBackgroundColor" format="color" />
+    </declare-styleable>
+</resources>

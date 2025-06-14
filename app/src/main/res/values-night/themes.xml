@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Saorsail.Shared.Dark">
+        <item name="primaryContainerColor">@color/dark_blue</item>
+        <item name="primaryTextColor">@color/text_color_light</item>
+        <item name="secondaryTextColor">@color/text_color_light_faded</item>
+
+        <item name="android:windowBackground">@color/dark_mode_background_color</item>
+        <item name="panelBackgroundColor">@color/dark_mode_panel_background_color</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="dividerColor">@color/panel_divider_color_dark</item>
+    </style>
+
+    <!-- Default Activity -->
+    <style name="Theme.Saorsail.Default" parent="Theme.Saorsail.Shared.Dark" />
+
+    <!-- Pair Activity -->
+    <style name="Theme.Saorsail.Pair" parent="Theme.Saorsail.Shared.Dark">
+        <item name="panelBackgroundColor">?hintColor</item>
+    </style>
+</resources>

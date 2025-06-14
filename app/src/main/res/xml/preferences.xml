@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Assistant">
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:icon="@drawable/on_off"
+            app:key="@string/preference_key_assistant_enabled_key"
+            app:summary="If you wish to enable or disable the checks for apps to install"
+            app:title="Enabled" />
+
+        <ListPreference
+            android:defaultValue="5 Minutes"
+            android:entries="@array/preferencesCheckIntervals"
+            android:entryValues="@array/preferencesCheckIntervalsValues"
+            android:key="@string/preference_key_assistant_check_interval"
+            android:summary="How often you wish to check for new apps to install"
+            android:title="Check Interval"
+            app:icon="@drawable/check_interval" />
+
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="@string/preference_key_assistant_pair_code"
+            android:selectAllOnFocus="true"
+            android:summary="The pair code, linked with the Saorsail website"
+            android:title="Pairing Code"
+            app:icon="@drawable/pair_code" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Notifications">
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:icon="@drawable/notifications"
+            app:key="@string/preference_key_notifications_enabled"
+            app:summary="Enable to receive notifications when downloads start or complete"
+            app:title="Enable Notifications" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Advanced">
+        <EditTextPreference
+            android:defaultValue="https://saorsail-main-6e1e5bc.d2.zuplo.dev"
+            android:key="@string/preference_key_check_endpoint"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Check Endpoint URL" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

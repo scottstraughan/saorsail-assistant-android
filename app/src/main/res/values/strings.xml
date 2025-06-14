@@ -1,0 +1,52 @@
+<resources>
+    <!-- General -->
+    <string name="welcome_text">Install apps directly from your browser by pairing this app with
+        the Saorsail website.</string>
+    <string name="saorsail_logo">Saorsail Logo</string>
+    <string name="app_title">Saorsail Assistant</string>
+    <string name="check_now">Check Now</string>
+
+    <!-- Main Activity -->
+    <string name="open_saorsail_com">Open saorsail.com</string>
+    <string name="nothing_to_install">Nothing to Install</string>
+    <string name="nothing_to_install_description">At the last check, there was nothing to
+        install</string>
+
+    <!-- Pair Activity -->
+    <string name="pair_via_qr">Pair via QR</string>
+    <string name="enter_code_manually">Enter Code Manually</string>
+
+    <!-- Fix Activity -->
+    <string name="checking_disabled_title">Assistant is Disabled</string>
+    <string name="checking_disabled_description">To allow apps to being installing to your device,
+        please visit settings and enable the assistant.</string>
+    <string name="pair_code_is_invalid_title">Pair Code is Invalid</string>
+    <string name="pair_code_is_invalid_title_description">The pairing code you have provided is
+        not valid. Please visit settings and add a valid pair code.</string>
+    <string name="change_settings">Change Settings</string>
+    <string name="open_settings">Open Settings</string>
+
+    <!-- Preferences -->
+    <string name="preference_key_assistant_enabled_key">PREFERENCE_ASSISTANT_ENABLED</string>
+    <string name="preference_key_assistant_check_interval">PREFERENCE_CHECK_INTERVAL</string>
+    <string name="preference_key_assistant_pair_code">PREFERENCE_PAIR_CODE</string>
+    <string name="preference_key_notifications_enabled">PREFERENCE_NOTIFICATIONS_ENABLED</string>
+    <string name="preference_key_check_endpoint">CHECK_ENDPOINT</string>
+    <string name="preference_key_download_location">PREFERENCE_DOWNLOAD_LOCATION</string>
+    <string-array name="preferencesCheckIntervals">
+        <item>1 min (test)</item>
+        <item>5 Minutes</item>
+        <item>15 Minutes</item>
+        <item>30 Minutes</item>
+        <item>Hourly</item>
+        <item>Daily</item>
+    </string-array>
+    <string-array name="preferencesCheckIntervalsValues">
+        <item>1_MIN</item>
+        <item>5_MIN</item>
+        <item>15_MIN</item>
+        <item>30_MIN</item>
+        <item>HOURLY</item>
+        <item>DAILY</item>
+    </string-array>
+</resources>
