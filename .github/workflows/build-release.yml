@@ -19,6 +19,19 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Create Keystore
+        run: |
+          echo "${{ secrets.SIGNING_KEYSTORE_BASE64 }}" | base64 --decode > keystore.jks
+
+      - name: Create Keystore Properties File
+        run: |
+          cat <<EOF > keystore.properties
+          storePassword=${{ secrets.SIGNING_STORE_PASSWORD }}
+          keyPassword=${{ secrets.SIGNING_KEY_PASSWORD }}
+          keyAlias=${{ secrets.SIGNING_KEY_ALIAS }}
+          storeFile=keystore.jks
+          EOF
+
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
