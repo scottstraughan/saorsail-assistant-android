@@ -66,7 +66,7 @@ public final class LocatorManager {
     ) throws JSONException {
         String responseStream = "";
         String locatorUrlEndpoint = PreferenceStorage.getAppInstallCheckUrl(this.context)
-            + "/check-test/";
+            + "/check/";
 
         try {
             URL url = new URL(locatorUrlEndpoint + pairCode);
