@@ -126,7 +126,7 @@ public class PreferenceStorage {
     public static String getAppInstallCheckUrl(
         Context context
     ) {
-        String defaultValue =  "https://saorsail-main-6e1e5bc.d2.zuplo.dev";
+        String defaultValue =  "https://saorsail-main-1ca2e7d.d2.zuplo.dev";
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
 

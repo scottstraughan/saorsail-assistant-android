@@ -40,7 +40,7 @@
 
     <PreferenceCategory android:title="Advanced">
         <EditTextPreference
-            android:defaultValue="https://saorsail-main-6e1e5bc.d2.zuplo.dev"
+            android:defaultValue="https://saorsail-main-1ca2e7d.d2.zuplo.dev"
             android:key="@string/preference_key_check_endpoint"
             android:selectAllOnFocus="true"
             android:singleLine="true"
