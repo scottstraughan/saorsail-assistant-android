@@ -5,17 +5,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.budiyev.android.codescanner.CodeScanner;
 import com.budiyev.android.codescanner.CodeScannerView;
+import com.budiyev.android.codescanner.ErrorCallback;
 import com.scottstraughan.saorsailassistant.R;
 import com.scottstraughan.saorsailassistant.logging.Logger;
+import com.scottstraughan.saorsailassistant.storage.PreferenceStorage;
 
 /**
  * Represents the QR code scanning view.
  */
-public class QRCodeScanView extends AppCompatActivity {
+public class QRCodeScanView extends AppCompatActivity implements ErrorCallback {
     private CodeScanner mCodeScanner;
 
     /**
@@ -28,8 +31,11 @@ public class QRCodeScanView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr);
 
+
+
         CodeScannerView scannerView = findViewById(R.id.qrCodeScannerView);
         mCodeScanner = new CodeScanner(this, scannerView);
+        mCodeScanner.setErrorCallback(this);
         mCodeScanner.setDecodeCallback(result -> runOnUiThread(() -> {
             Toast.makeText(QRCodeScanView.this, result.getText(), Toast.LENGTH_SHORT).show();
             this.success(result.getText());
@@ -64,6 +70,9 @@ public class QRCodeScanView extends AppCompatActivity {
     private void success(
         String qrCode
     ) {
+        PreferenceStorage.setPairCode(this, qrCode);
+
+        Logger.e(qrCode);
         Intent returnIntent = new Intent();
         returnIntent.putExtra("qr", qrCode);
         setResult(Activity.RESULT_OK, returnIntent);
@@ -78,5 +87,11 @@ public class QRCodeScanView extends AppCompatActivity {
         Intent returnIntent = new Intent();
         setResult(Activity.RESULT_CANCELED, returnIntent);
         finish();
+    }
+
+    @Override
+    public void onError(@NonNull Throwable thrown) {
+        System.err.println(thrown.getMessage());
+        System.err.println("error camera");
     }
 }

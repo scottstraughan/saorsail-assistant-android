@@ -88,6 +88,23 @@ public class PreferenceStorage {
     }
 
     /**
+     * @param context context to use
+     * @param code
+     */
+    public static void setPairCode(
+        Context context,
+        String code
+    ) {
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
+        editor.putString(context.getString(
+            R.string.preference_key_assistant_pair_code), code);
+
+        editor.apply();
+    }
+
+    /**
      * Get the location to store APKs.
      * @param context the context to use
      * @return location to store downloads
