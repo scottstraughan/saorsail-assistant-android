@@ -1,10 +1,14 @@
 package com.scottstraughan.saorsailassistant.ui.activities.pair;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.scottstraughan.saorsailassistant.R;
 import com.scottstraughan.saorsailassistant.logging.Logger;
@@ -70,8 +74,15 @@ public class PairActivity extends AppCompatActivity {
      * Called when the scan QR button has been clicked. Starts the QR code scanning API.
      */
     private void onScanQrButtonPressed() {
-        Intent intent = new Intent(this, QRCodeScanView.class);
-        startActivity(intent);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+            != PackageManager.PERMISSION_GRANTED) {
+            // Permission is not granted, request it
+            ActivityCompat.requestPermissions(
+                this, new String[]{Manifest.permission.CAMERA},  100);
+        } else {
+            Intent intent = new Intent(this, QRCodeScanView.class);
+            startActivity(intent);
+        }
     }
 
     /**

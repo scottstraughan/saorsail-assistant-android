@@ -142,6 +142,9 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         String qrCode = data.getStringExtra("qr");
 
+        Logger.e("Received QR:" + qrCode);
+        Logger.i("Received QR:" + qrCode);
+        Logger.i("Received QR:" + qrCode);
         Logger.i("Received QR:" + qrCode);
     }
 
